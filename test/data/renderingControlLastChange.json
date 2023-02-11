@@ -23,6 +23,9 @@
   "bass": {
     "val": "3"
   },
+  "surroundMode": {
+    "val": "1"
+  },
   "treble":{
     "val": "-2"
   },

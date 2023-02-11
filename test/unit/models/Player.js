@@ -360,6 +360,12 @@ describe('Player', () => {
       expect(player.state.equalizer.bass).equals(3);
     });
 
+    it('surroundmode is 1', () => {
+      let lastChange = require('../../data/renderingControlLastChange.json');
+      listener.on.withArgs('last-change').yield('RINCON_00000000000001400', lastChange);
+      expect(player.state.equalizer.surroundMode).equals(1);
+    });
+
     it('treble is -2', () => {
       let lastChange = require('../../data/renderingControlLastChange.json');
       listener.on.withArgs('last-change').yield('RINCON_00000000000001400', lastChange);
