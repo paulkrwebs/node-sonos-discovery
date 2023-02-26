@@ -387,7 +387,7 @@ describe('Player', () => {
     it('emits event', () => {
       let lastChange = require('../../data/renderingControlLastChange.json');
       listener.on.withArgs('last-change').yield('RINCON_00000000000001400', lastChange);
-      expect(system.emit).calledOnce;
+      expect(system.emit).calledTwice;
     });
   });
 
